@@ -1,0 +1,125 @@
+<html>
+	<head>
+		<title>REGISTRATION FORM</title>
+		<style>
+			h1 
+			{  
+				color:blue;
+		    }
+		    h2
+		    {
+		    	color:red;
+		    }    
+		</style>
+		<script>
+			function validate()
+			{
+				var fname=document.reg_form.fname;
+				var lname=document.reg_form.lname;
+				var address=document.reg_form.address;
+				var gender=document.reg_form.gender;
+				var email=document.reg_form.email;
+				var mobile=document.reg_form.mobile;
+				var course=document.reg_form.course;
+				if(fname.value.length<=0)
+				{
+					alert("First Name is required !");
+					fname.focus();
+					return false;
+				}
+				if(lname.value.length<=0)
+				{
+					alert("Last Name is required !");
+					lname.focus();
+					return false;
+				}
+				if(address.value.length<=0)
+				{
+					alert("Address is required !");
+					address.focus();
+					return false;
+				}
+				if(gender.value.length<=0)
+				{
+					alert("Gender is required !");
+					gender.focus();
+					return false;
+				}
+				if(email.value.length<=0)
+				{
+					alert("Email id is required !");
+					email.focus();
+					return false;
+				}
+				if(mobile.value.length<=0)
+				{
+					alert("Mobile Number is required !");
+					mobile.focus();
+					return false;
+				}
+				if(course.value.length<=0)
+				{
+					alert("Course is required !");
+					course.focus();
+					return false;
+				}
+				return false;
+			}
+		</script>
+	</head>
+	<body>
+		<h1><b>FORM VALIDATION USING JAVASCRIPT<b></h1>
+		<hr>
+		<form method ="action" name="reg_form" Onsubmit="return validate()">
+			<h2>Registration Form</h2>
+			<table>
+				<tr>
+					<td><label><b>FIRST NAME :<b></label></td>
+					<td><input type="text" name="fname" placeholder="First Name"></td>
+				</tr>
+				<tr>
+					<td><label><b>LAST NAME :<b></label></td>
+					<td><input type="text" name="lname" placeholder="Last Name"></td>
+				</tr>
+				<tr>
+					<td><label><b>ADDRESS :<b></label></td>
+					<td><input type="textarea" size="20" name="address" placeholder="Address"></td>
+				</tr>
+				<tr>
+					<td><label><b>GENDER :<b></label></td>
+					<td>
+						<input type="radio" name="gender" value="male">Male
+						<input type="radio" name="gender" value="female">Female
+					</td>
+				</tr>
+				<tr>
+					<td><label><b>EMAIL ID :<b></label></td>
+					<td><input type="text" name="email" placeholder="example@gmail.com"></td>
+				</tr>
+				<tr>
+					<td><label><b>MOBILE NUMBER :<b></label></td>
+					<td><input type="number" name="mobile" placeholder="Mobile"></td>
+				</tr>
+				<tr>
+					<td><label><b>COURSE :<b></label></td>
+					<td>
+						<select name="course">
+							<option value="select course">Select Course</option>
+							<option value="HTML">HTML</option>
+							<option value="CSS">CSS</option>
+							<option value="JavaScript">JavaScript</option>
+							<option value="JAVA">JAVA</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td><input type="submit" value="SUBMIT" name="submit"></td>
+					<td><input type="reset" value="RESET" name="reset"></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
+
+
+

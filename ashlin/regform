@@ -1,0 +1,26 @@
+<html>
+	<title>REGISTRATION FORM</title>
+	<head>
+		<style>
+			h3
+			{
+				color:red;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="value.php" method="POST">
+			<h3><b>REGISTRATION FORM<b></h3>
+			Name:<input type="text" name="name"><br><br>
+			DOB:<input type="date" name="dob"><br><br>
+			Gender:<input type="radio" name="gender" value="Female">FEMALE<br><br>
+			<input type="radio" name="gender" value="Male">MALE<br><br>
+			<input type="radio" name="gender" value="Others">OTHERS<br><br>
+			Address:<input type="text" name="address"><br><br>
+			Phone:<input type="text" name="phone"><br><br>
+			<input type="submit" name="sub" value="SUBMIT">
+		</form>
+	</body>
+</html>
+
+

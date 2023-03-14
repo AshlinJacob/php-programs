@@ -1,0 +1,56 @@
+class NewThreads implements Runnable
+{
+    String name; 
+    Thread t;
+    NewThreads(String threadname)
+    {
+        name=threadname;
+        t=new Thread(this,name); System.out.println("NewThread : " +t); 
+        t.start();
+    }
+    public void run()
+    {
+    	try 
+        {
+	     for(int i=5;i>0;i--)
+            {
+
+                System.out.println("mainthread: " +i); 
+                Thread.sleep(1000);
+            }
+        }
+        catch(InterruptedException e)
+        {
+            System.out.println("child Interrupted ");
+        }
+        System.out.println("Exiting child thread ");
+    }
+}
+class Multithread
+{
+    public static void main(String args[])
+    {
+        NewThreads ob1=new NewThreads("one");
+        NewThreads ob2=new NewThreads("two");
+        NewThreads ob3=new NewThreads("three");
+        System.out.println("Thread one is Alive " +ob1.t. isAlive()); 
+        System.out.println("Thread two is Alive " +ob2.t .isAlive()); 
+        System.out.println("Thread three is Alive " +ob3.t. isAlive()); 
+        try 
+        {
+        	System.out.println("waiting for thread to finish "); 
+        	ob1.t.join();
+        	System.out.println(ob1.t .isAlive()); 
+        	ob2.t.join(); 
+        	System.out.println(ob2.t .isAlive()); 
+        	ob3.t.join(); 
+        	System.out.println(ob3.t. isAlive());
+        }
+        catch(InterruptedException e)
+        {
+        	System.out.println("main thread Interrupted");
+        }
+        System.out.println("main thread Exiting ");
+    }
+}
+

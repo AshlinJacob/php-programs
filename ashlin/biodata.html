@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<title>BIODATA FORM</title>
+		<style>
+			h1 { color : blue;
+		       }
+		</style>
+		<script>
+			function validateForm()
+			{ 
+				let a = document.forms["myForm"]["name"].value;
+			  	if (a=="")
+			   	{ 
+			   		alert("Name must be filled out!!");
+				 	return false;
+			   	}
+			  	let b = document.forms["myForm"]["dob"].value;
+			  	if (b=="")
+			   	{ 
+			   		alert("Date of birth must be filled out!!");
+				 	return false;
+			   	}
+			  	let c = document.forms["myForm"]["gender"].value;
+			  	if (c=="")
+			   	{ 	
+			   		alert("Gender must be filled out!!");
+				 	return false;
+			   	}
+			  	let d = document.forms["myForm"]["address"].value;
+			  	if (d=="")
+			   	{ 
+			   		alert("Address must be filled out!!");
+				 	return false;
+			   	}
+			  	let e = document.forms["myForm"]["phno"].value;
+			  	if (e=="")
+			   	{ 
+			   		alert("Phone number must be filled out!!");
+				 	return false;
+			   	}
+			}	   
+		</script>
+	</head>
+	<body>
+		<h1><b>BIODATA FORM<b></h1>
+		<form name ="myForm" onsubmit= "validateForm()" method="post">
+		NAME :
+		<input type= "text" name="name">
+		<br><br>
+		DATE OF BIRTH :
+		<input type= "date" name="dob">
+		<br><br>
+		GENDER :
+		<input type= "radio" name="gender" value = "female">Female
+		<input type= "radio" name="gender" value = "male"> Male
+		<br><br>
+		ADDRESS :
+		<input type= "text" name="address">
+		<br><br>
+		PHONE NUMBER :
+		<input type= "text" name="phno">
+		<br><br>
+		<input type= "submit" value="SUBMIT">
+		</form>
+	</body>
+</html>
+
+

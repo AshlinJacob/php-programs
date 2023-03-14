@@ -1,0 +1,40 @@
+integer.interface
+
+import Mypack.*;
+public class integer implements printable 
+{
+    
+    public void show() 
+    {
+        System.out.println("hai java.......");
+    }
+    public void display() 
+    {
+        System.out.println("hai Php.......");
+    }
+	
+}
+class  Demo
+{
+	public static void main(String args[])
+	{
+           integer i=new integer();
+           i.display();
+           i.show();
+    }
+}
+
+
+
+
+printable
+
+
+
+package Mypack;
+public interface printable 
+{
+	void show();
+	void display();
+
+}
